@@ -8,5 +8,5 @@ do
         fact=`expr $fact \* $num`
         num=`expr $num - 1`
 done
-   echo "fact of $1 is $fact"
+   echo "factor of $1 is $fact"
 
