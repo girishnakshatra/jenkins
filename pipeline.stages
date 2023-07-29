@@ -1,5 +1,8 @@
 pipeline {
-    agent any;
+    agent {
+      label 'girinew'
+}
+
     stages {
         stage("build"){
             steps{
