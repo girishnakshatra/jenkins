@@ -6,8 +6,7 @@ pipeline {
     stages {
         stage("build"){
             steps{
-                git branch: 'main', url: 'https://github.com/girishnakshatra/jenkins.git'
-                sh "sleep 5"
+                git branch: 'main', credentialsId: 'giri', url: 'https://github.com/girishnakshatra/jenkins.git'
             }
         }
 
