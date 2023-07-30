@@ -1,7 +1,7 @@
 pipeline {
     agent none
     stages {
-        stage("build"){
+        stage("build") {
             agent { label 'master' }
             steps{
                 git branch: 'main', credentialsId: 'giri', url: 'https://github.com/girishnakshatra/jenkins.git'
