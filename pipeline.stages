@@ -1,15 +1,15 @@
 pipeline {
     agent any
     stages {
-        stage("build") {
+    stage("build") {
             parallel {
-            stage("build1") {
+        stage("build1") {
             steps{
                 echo "this is build"
                 sh "sleep 5"
             }
         }
-            stage("build2") {
+        stage("build2") {
             steps{
                 echo "this is build"
          }
@@ -17,34 +17,17 @@ pipeline {
    }
 }
         stage("deploy"){
-        parallel {
-           stage("deploy1') {
             steps{
                 echo "this is deploy1 stage"
-        }
-}
-            stage("deploy2') {
-            steps{
-                echo "this is deploy2 stage"
-        }
-     }
+
    }
 }
 
         stage("test"){
-        parallel {
-           stage("test1") {
             steps {
                 echo "this is test1 stage"
             }
         }
-            stage("test2") {
-            steps {
-                echo "this is test2 stage"
-            }
-        }
-     }
-}
     }
 
 }
