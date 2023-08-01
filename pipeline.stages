@@ -19,6 +19,11 @@ pipeline {
                 echo "this is build3"
          }
       }
+       stage("build4") {
+            steps{
+                echo "this is build4"
+         }
+      }
    }
 }
         stage("deploy"){
