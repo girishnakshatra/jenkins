@@ -20,14 +20,12 @@ pipeline {
         parallel {
            stage("deploy1') {
             steps{
-                echo "this is deploy stage"
-                sh "sleep 5"
+                echo "this is deploy1 stage"
         }
 }
-            stage("deploy1') {
+            stage("deploy2') {
             steps{
-                echo "this is deploy stage"
-                sh "sleep 5"
+                echo "this is deploy2 stage"
         }
      }
    }
@@ -37,14 +35,12 @@ pipeline {
         parallel {
            stage("test1") {
             steps {
-                echo "this is test stage"
-                sh "sleep 5"
+                echo "this is test1 stage"
             }
         }
-            stage("test1") {
+            stage("test2") {
             steps {
-                echo "this is test stage"
-                sh "sleep 5"
+                echo "this is test2 stage"
             }
         }
      }
