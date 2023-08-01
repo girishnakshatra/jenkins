@@ -17,17 +17,38 @@ pipeline {
    }
 }
         stage("deploy"){
+        parallel {
+           stage("deploy1') {
             steps{
                 echo "this is deploy stage"
                 sh "sleep 5"
         }
 }
+            stage("deploy1') {
+            steps{
+                echo "this is deploy stage"
+                sh "sleep 5"
+        }
+     }
+   }
+}
+
         stage("test"){
+        parallel {
+           stage("test1") {
             steps {
                 echo "this is test stage"
                 sh "sleep 5"
             }
         }
+            stage("test1") {
+            steps {
+                echo "this is test stage"
+                sh "sleep 5"
+            }
+        }
+     }
+}
     }
 
 }
