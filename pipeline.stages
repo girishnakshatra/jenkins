@@ -17,12 +17,20 @@ pipeline {
    }
 }
         stage("deploy"){
-            steps{
+            parallel {
+            stage("deploy1"){
+             steps{
                 echo "this is deploy1 stage"
 
    }
 }
-
+            stage("deploy2"){
+             steps{
+                echo "this is deploy2 stage"
+       }
+    }
+  }
+}
         stage("test"){
             steps {
                 echo "this is test1 stage"
